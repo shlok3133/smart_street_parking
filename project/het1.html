@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Smart Vehicle Parking Form</title>
+    <link rel="stylesheet" type="text/css" href="het1.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Smart Vehicle Parking Reservation</h1>
+        <form action="parking_process.php" method="post">
+            <div class="form-group">
+                <label for="vehicle-type">Vehicle Type:</label>
+                <select name="vehicle-type" id="vehicle-type" required>
+                    <option value="car">Car</option>
+                    <option value="motorcycle">Motorcycle</option>
+                    <option value="bike">Bike</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="license-plate">License Plate:</label>
+                <input type="text" name="license-plate" id="license-plate" required>
+            </div>
+
+            <div class="form-group">
+                <label for="parking-duration">Parking Duration (hours):</label>
+                <input type="number" name="parking-duration" id="parking-duration" required>
+            </div>
+
+            <div class="form-group">
+                <label>Payment Method:</label>
+                <div class="radio-group">
+                    <input type="radio" name="payment-method" value="credit-card" id="credit-card" required>
+                    <label for="credit-card">Credit Card</label>
+
+                    <input type="radio" name="payment-method" value="paypal" id="paypal">
+                    <label for="paypal">PayPal</label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="parking-location">Parking Location:</label>
+                <select name="parking-location" id="parking-location" required>
+                    <option value="lot-a">Lot A</option>
+                    <option value="lot-b">Lot B</option>
+                    <option value="lot-c">Lot C</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <button type="submit">Reserve Parking</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
